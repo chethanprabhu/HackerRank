@@ -1,0 +1,15 @@
+static int pairs(int k, int[] arr) {
+	Set<Integer> set = new HashSet();
+        int count = 0;
+
+        for(int i : arr) {
+            set.add(i);
+        }
+
+        for(int j : set) {
+            if(set.contains(j + k)) {
+                count++;
+            }
+        }
+        return count;
+    }
